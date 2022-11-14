@@ -26,3 +26,7 @@ def get_numerical_integration(lower, upper):
         output["message"].append(NumericalIntegration(lower, upper, n))
     status_code = 200
     return output, status_code
+
+@app.route('/', methods=['GET'])
+def get():
+    return {'message':"Hello world!"}
